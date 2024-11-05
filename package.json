@@ -15,7 +15,9 @@
   "module": "./dist/index.cjs",
   "types": "./dist/index.d.ts",
   "scripts": {
+    "dev": "tsup --watch",
     "build": "tsup --dts",
+    "lint": "eslint . -c eslint.config.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "prepare": "husky"
   },
@@ -31,8 +33,21 @@
   "devDependencies": {
     "@commitlint/cli": "^19.5.0",
     "@commitlint/config-conventional": "^19.5.0",
+    "@types/eslint-config-prettier": "^6.11.3",
+    "@types/eslint__js": "^8.42.3",
+    "eslint": "^9.14.0",
     "husky": "^9.1.6",
+    "prettier": "^3.3.3",
     "tsup": "^8.3.5",
     "typescript": "^5.6.3"
+  },
+  "dependencies": {
+    "@eslint/js": "^9.14.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-destructuring": "^2.2.1",
+    "eslint-plugin-import": "^2.31.0",
+    "eslint-plugin-prefer-arrow": "^1.2.3",
+    "eslint-plugin-prettier": "^5.2.1",
+    "typescript-eslint": "^8.13.0"
   }
 }
