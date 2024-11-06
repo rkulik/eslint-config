@@ -8,6 +8,7 @@ export default [
   ...configs.destructuring,
   ...configs.eslint,
   ...configs.import,
+  ...configs.preferArrow,
   ...configs.prettier,
   ...configs.typescript,
 ];
