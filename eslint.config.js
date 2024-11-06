@@ -5,6 +5,7 @@ export default [
   {
     ignores: ['**/dist'],
   },
+  ...configs.destructuring,
   ...configs.eslint,
   ...configs.prettier,
   ...configs.typescript,

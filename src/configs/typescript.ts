@@ -1,13 +1,12 @@
 import typeScriptConfig from 'typescript-eslint';
 
-import { destructuringPlugin, importPlugin, preferArrowPlugin } from '../plugins';
+import { importPlugin, preferArrowPlugin } from '../plugins';
 import type { Config } from '../types';
 
 export const typescriptConfigs: Config[] = [
   ...typeScriptConfig.configs.recommended,
   {
     plugins: {
-      destructuring: destructuringPlugin,
       import: importPlugin,
       'prefer-arrow': preferArrowPlugin,
     },
@@ -17,13 +16,6 @@ export const typescriptConfigs: Config[] = [
       '@typescript-eslint/no-explicit-any': 'warn',
       '@typescript-eslint/no-non-null-assertion': 'off',
       '@typescript-eslint/no-unused-vars': 'error',
-      'destructuring/in-methods-params': 'error',
-      'destructuring/in-params': [
-        'error',
-        {
-          'max-params': 0,
-        },
-      ],
       'import/no-default-export': 'error',
       'import/order': [
         'error',
