@@ -5,5 +5,6 @@ export default [
   {
     ignores: ['**/dist'],
   },
+  ...configs.eslint,
   ...configs.typescript,
 ];

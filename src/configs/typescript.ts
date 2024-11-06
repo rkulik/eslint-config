@@ -1,4 +1,3 @@
-import eslint from '@eslint/js';
 import prettierConfig from 'eslint-config-prettier';
 import typeScriptConfig from 'typescript-eslint';
 
@@ -6,7 +5,6 @@ import { destructuringPlugin, importPlugin, preferArrowPlugin, prettierPlugin } 
 import type { Config } from '../types';
 
 export const typescriptConfigs: Config[] = [
-  eslint.configs.recommended,
   ...typeScriptConfig.configs.recommended,
   prettierConfig,
   {
@@ -23,7 +21,6 @@ export const typescriptConfigs: Config[] = [
       '@typescript-eslint/no-non-null-assertion': 'off',
       '@typescript-eslint/no-unused-vars': 'error',
       'destructuring/in-methods-params': 'error',
-      'arrow-body-style': ['error', 'always'],
       'destructuring/in-params': [
         'error',
         {
@@ -45,8 +42,6 @@ export const typescriptConfigs: Config[] = [
           'newlines-between': 'always',
         },
       ],
-      'no-console': 'warn',
-      'no-else-return': 'error',
       'prefer-arrow/prefer-arrow-functions': 'error',
       'prettier/prettier': 'error',
     },
