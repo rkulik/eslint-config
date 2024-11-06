@@ -7,6 +7,7 @@ export default [
   },
   ...configs.destructuring,
   ...configs.eslint,
+  ...configs.import,
   ...configs.prettier,
   ...configs.typescript,
 ];
