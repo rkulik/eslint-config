@@ -1,18 +1,15 @@
-import prettierConfig from 'eslint-config-prettier';
 import typeScriptConfig from 'typescript-eslint';
 
-import { destructuringPlugin, importPlugin, preferArrowPlugin, prettierPlugin } from '../plugins';
+import { destructuringPlugin, importPlugin, preferArrowPlugin } from '../plugins';
 import type { Config } from '../types';
 
 export const typescriptConfigs: Config[] = [
   ...typeScriptConfig.configs.recommended,
-  prettierConfig,
   {
     plugins: {
       destructuring: destructuringPlugin,
       import: importPlugin,
       'prefer-arrow': preferArrowPlugin,
-      prettier: prettierPlugin,
     },
     rules: {
       '@typescript-eslint/explicit-function-return-type': 'error',
@@ -43,7 +40,6 @@ export const typescriptConfigs: Config[] = [
         },
       ],
       'prefer-arrow/prefer-arrow-functions': 'error',
-      'prettier/prettier': 'error',
     },
   },
 ];
