@@ -1,14 +1,4 @@
-import { configs } from './dist/index.js';
+import { rkulik } from './dist/index.js';
 
 // eslint-disable-next-line import/no-default-export
-export default [
-  {
-    ignores: ['**/dist'],
-  },
-  ...configs.destructuring,
-  ...configs.imports,
-  ...configs.javascript,
-  ...configs.preferArrow,
-  ...configs.prettier,
-  ...configs.typescript,
-];
+export default rkulik({ ignores: ['**/dist'] });
