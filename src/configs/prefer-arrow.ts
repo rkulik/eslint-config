@@ -1,7 +1,7 @@
 import { pluginPreferArrow } from '../plugins';
 import type { Config } from '../types';
 
-export const preferArrowConfigs: Config[] = [
+export const preferArrow: Config[] = [
   {
     plugins: {
       'prefer-arrow': pluginPreferArrow,

@@ -1,7 +1,7 @@
 import { pluginTypeScript } from '../plugins';
 import type { Config } from '../types';
 
-export const typescriptConfigs: Config[] = [
+export const typescript: Config[] = [
   ...pluginTypeScript.configs.recommended,
   {
     rules: {

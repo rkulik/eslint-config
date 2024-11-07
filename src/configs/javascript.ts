@@ -2,7 +2,7 @@ import eslintJs from '@eslint/js';
 
 import type { Config } from '../types';
 
-export const eslintConfigs: Config[] = [
+export const javascript: Config[] = [
   eslintJs.configs.recommended,
   {
     rules: {

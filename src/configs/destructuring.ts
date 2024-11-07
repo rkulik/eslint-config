@@ -1,7 +1,7 @@
 import { pluginDestructuring } from '../plugins';
 import type { Config } from '../types';
 
-export const destructuringConfigs: Config[] = [
+export const destructuring: Config[] = [
   {
     plugins: {
       destructuring: pluginDestructuring,

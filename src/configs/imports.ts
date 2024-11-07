@@ -1,7 +1,7 @@
 import { pluginImport } from '../plugins';
 import type { Config } from '../types';
 
-export const importConfigs: Config[] = [
+export const imports: Config[] = [
   {
     plugins: {
       import: pluginImport,

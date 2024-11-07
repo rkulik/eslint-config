@@ -3,7 +3,7 @@ import prettierConfig from 'eslint-config-prettier';
 import { pluginPrettier } from '../plugins';
 import type { Config } from '../types';
 
-export const prettierConfigs: Config[] = [
+export const prettier: Config[] = [
   prettierConfig,
   {
     plugins: {
