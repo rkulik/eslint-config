@@ -1,9 +1,8 @@
-import typeScriptConfig from 'typescript-eslint';
-
+import { pluginTypeScript } from '../plugins';
 import type { Config } from '../types';
 
 export const typescriptConfigs: Config[] = [
-  ...typeScriptConfig.configs.recommended,
+  ...pluginTypeScript.configs.recommended,
   {
     rules: {
       '@typescript-eslint/explicit-function-return-type': 'error',

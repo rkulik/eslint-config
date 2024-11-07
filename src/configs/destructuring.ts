@@ -1,10 +1,10 @@
-import { destructuringPlugin } from '../plugins';
+import { pluginDestructuring } from '../plugins';
 import type { Config } from '../types';
 
 export const destructuringConfigs: Config[] = [
   {
     plugins: {
-      destructuring: destructuringPlugin,
+      destructuring: pluginDestructuring,
     },
     rules: {
       'destructuring/in-methods-params': 'error',

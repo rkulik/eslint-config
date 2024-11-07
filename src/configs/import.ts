@@ -1,10 +1,10 @@
-import { importPlugin } from '../plugins';
+import { pluginImport } from '../plugins';
 import type { Config } from '../types';
 
 export const importConfigs: Config[] = [
   {
     plugins: {
-      import: importPlugin,
+      import: pluginImport,
     },
     rules: {
       'import/no-default-export': 'error',

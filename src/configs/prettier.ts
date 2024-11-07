@@ -1,13 +1,13 @@
 import prettierConfig from 'eslint-config-prettier';
 
-import { prettierPlugin } from '../plugins';
+import { pluginPrettier } from '../plugins';
 import type { Config } from '../types';
 
 export const prettierConfigs: Config[] = [
   prettierConfig,
   {
     plugins: {
-      prettier: prettierPlugin,
+      prettier: pluginPrettier,
     },
     rules: {
       'prettier/prettier': 'error',
