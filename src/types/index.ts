@@ -8,5 +8,6 @@ export interface OptionsConfig {
   javascript?: boolean;
   preferArrow?: boolean;
   prettier?: boolean;
+  react?: boolean;
   typescript?: boolean;
 }
