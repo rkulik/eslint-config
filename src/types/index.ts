@@ -9,5 +9,6 @@ export interface OptionsConfig {
   preferArrow?: boolean;
   prettier?: boolean;
   react?: boolean;
+  tailwindcss?: boolean;
   typescript?: boolean;
 }

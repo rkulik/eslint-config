@@ -1,4 +1,4 @@
-import { destructuring, imports, javascript, preferArrow, prettier, react, typescript } from './configs';
+import { destructuring, imports, javascript, preferArrow, prettier, react, tailwindcss, typescript } from './configs';
 import type { Config, OptionsConfig } from './types';
 import { combineConfigs } from './utils';
 
@@ -10,6 +10,7 @@ export const rkulik = (options: OptionsConfig = {}, ...userConfigs: (Config | Co
     preferArrow: includePreferArrow = true,
     prettier: includePrettier = true,
     react: includeReact = true,
+    tailwindcss: includeTailwindCss = true,
     typescript: includeTypeScript = true,
   } = options;
 
@@ -20,6 +21,7 @@ export const rkulik = (options: OptionsConfig = {}, ...userConfigs: (Config | Co
     includePreferArrow ? preferArrow : [],
     includePrettier ? prettier : [],
     includeReact ? react : [],
+    includeTailwindCss ? tailwindcss : [],
     includeTypeScript ? typescript : [],
     ...userConfigs,
   ].filter(configItem => {
