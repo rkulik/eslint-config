@@ -1,3 +1,5 @@
+import { isPackageExists } from 'local-pkg';
+
 import { destructuring, imports, javascript, preferArrow, prettier, react, tailwindcss, typescript } from './configs';
 import type { Config, OptionsConfig } from './types';
 import { combineConfigs } from './utils';
@@ -9,9 +11,9 @@ export const rkulik = (options: OptionsConfig = {}, ...userConfigs: (Config | Co
     javascript: includeJavasScript = true,
     preferArrow: includePreferArrow = true,
     prettier: includePrettier = true,
-    react: includeReact = true,
-    tailwindcss: includeTailwindCss = true,
-    typescript: includeTypeScript = true,
+    react: includeReact = isPackageExists('react'),
+    tailwindcss: includeTailwindCss = isPackageExists('tailwindcss'),
+    typescript: includeTypeScript = isPackageExists('typescript'),
   } = options;
 
   const configs: (Config | Config[])[] = [
