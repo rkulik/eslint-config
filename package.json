@@ -8,7 +8,7 @@
     "type": "git",
     "url": "git+https://github.com/rkulik/eslint-config.git"
   },
-  "license": "UNLICENSED",
+  "license": "MIT",
   "author": "René Kulik <rene@kulik.io> (https://www.kulik.io/)",
   "type": "module",
   "main": "./dist/index.js",
