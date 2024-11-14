@@ -1,12 +1,23 @@
 import { isPackageExists } from 'local-pkg';
 
-import { destructuring, imports, javascript, preferArrow, prettier, react, tailwindcss, typescript } from './configs';
+import {
+  destructuring,
+  ignores,
+  imports,
+  javascript,
+  preferArrow,
+  prettier,
+  react,
+  tailwindcss,
+  typescript,
+} from './configs';
 import type { Config, OptionsConfig } from './types';
 import { combineConfigs } from './utils';
 
 export const rkulik = (options: OptionsConfig = {}, ...userConfigs: (Config | Config[])[]): Config[] => {
   const {
     destructuring: includeDestructuring = true,
+    ignores: includeIgnores = true,
     imports: includeImports = true,
     javascript: includeJavasScript = true,
     preferArrow: includePreferArrow = true,
@@ -18,6 +29,7 @@ export const rkulik = (options: OptionsConfig = {}, ...userConfigs: (Config | Co
 
   const configs: (Config | Config[])[] = [
     includeDestructuring ? destructuring : [],
+    includeIgnores ? ignores : [],
     includeImports ? imports : [],
     includeJavasScript ? javascript : [],
     includePreferArrow ? preferArrow : [],

@@ -4,6 +4,7 @@ import { isPackageExists } from 'local-pkg';
 import rkulik from '../src';
 import {
   destructuring,
+  ignores,
   imports,
   javascript,
   preferArrow,
@@ -27,6 +28,7 @@ describe('factory', () => {
       mockedIsPackageExists.mockReturnValue(true);
       expect(rkulik()).toEqual([
         ...destructuring,
+        ...ignores,
         ...imports,
         ...javascript,
         ...preferArrow,
@@ -41,6 +43,7 @@ describe('factory', () => {
       mockedIsPackageExists.mockReturnValue(true);
       expect(rkulik({}, { ignores: ['**/dist'] })).toEqual([
         ...destructuring,
+        ...ignores,
         ...imports,
         ...javascript,
         ...preferArrow,
@@ -54,7 +57,7 @@ describe('factory', () => {
 
     test('should include configs based on installed packages', () => {
       mockedIsPackageExists.mockReturnValue(false);
-      expect(rkulik()).toEqual([...destructuring, ...imports, ...javascript, ...preferArrow, ...prettier]);
+      expect(rkulik()).toEqual([...destructuring, ...ignores, ...imports, ...javascript, ...preferArrow, ...prettier]);
     });
 
     test('should include configs based on options', () => {
@@ -62,6 +65,7 @@ describe('factory', () => {
       expect(
         rkulik({
           destructuring: false,
+          ignores: false,
           imports: false,
           javascript: false,
           preferArrow: false,

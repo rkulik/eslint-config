@@ -1,4 +1,5 @@
 export * from './destructuring';
+export * from './ignores';
 export * from './imports';
 export * from './javascript';
 export * from './prefer-arrow';
