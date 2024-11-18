@@ -1,9 +1,12 @@
 {
   "name": "@rkulik/eslint-config",
-  "private": true,
-  "version": "0.0.0",
-  "description": "",
-  "keywords": [],
+  "version": "1.0.0",
+  "description": "René's ESLint configuration",
+  "keywords": [
+    "eslint",
+    "config",
+    "eslint-config"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/rkulik/eslint-config.git"
