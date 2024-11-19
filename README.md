@@ -64,7 +64,7 @@ This package also exports all available configurations and utilities. These expo
 
 ```js
 // eslint.config.js
-import { utils, configs } from './dist/index.js';
+import { configs, utils } from '@rkulik/eslint-config';
 
 // eslint-disable-next-line import/no-default-export
 export default utils.combineConfigs(
