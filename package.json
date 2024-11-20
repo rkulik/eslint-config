@@ -44,10 +44,6 @@
   },
   "homepage": "https://github.com/rkulik/eslint-config#readme",
   "packageManager": "pnpm@9.14.2",
-  "engines": {
-    "node": ">=20.12.2",
-    "pnpm": ">=9.7.0"
-  },
   "devDependencies": {
     "@commitlint/cli": "^19.6.0",
     "@commitlint/config-conventional": "^19.6.0",
