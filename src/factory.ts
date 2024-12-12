@@ -38,9 +38,7 @@ export const rkulik = (options: OptionsConfig = {}, ...userConfigs: (Config | Co
     includeTailwindCss ? tailwindcss : [],
     includeTypeScript ? typescript : [],
     ...userConfigs,
-  ].filter((configItem) => {
-    return !Array.isArray(configItem) || !!configItem.length;
-  });
+  ];
 
   return combineConfigs(...configs);
 };

@@ -17,5 +17,13 @@ describe('utils', () => {
     test('should flatten configs', () => {
       expect(combineConfigs([CONFIGS[0], CONFIGS[1]], CONFIGS[2])).toEqual([CONFIGS[0], CONFIGS[1], CONFIGS[2]]);
     });
+
+    test('should filter out empty configs', () => {
+      expect(combineConfigs(CONFIGS[0], CONFIGS[1], {}, [{}, CONFIGS[2]])).toEqual([
+        CONFIGS[0],
+        CONFIGS[1],
+        CONFIGS[2],
+      ]);
+    });
   });
 });
