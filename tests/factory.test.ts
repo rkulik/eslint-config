@@ -41,7 +41,7 @@ describe('factory', () => {
 
     test('should include user configs', () => {
       mockedIsPackageExists.mockReturnValue(true);
-      expect(rkulik({}, { ignores: ['**/dist'] })).toEqual([
+      expect(rkulik({}, { ignores: ['**/dist'] }, [{ ignores: ['**/build'] }, { rules: { semi: 'error' } }])).toEqual([
         ...destructuring,
         ...ignores,
         ...imports,
@@ -52,6 +52,24 @@ describe('factory', () => {
         ...tailwindcss,
         ...typescript,
         { ignores: ['**/dist'] },
+        { ignores: ['**/build'] },
+        { rules: { semi: 'error' } },
+      ]);
+    });
+
+    test('should not include empty user config arrays', () => {
+      mockedIsPackageExists.mockReturnValue(true);
+      expect(rkulik({}, {}, [])).toEqual([
+        ...destructuring,
+        ...ignores,
+        ...imports,
+        ...javascript,
+        ...preferArrow,
+        ...prettier,
+        ...react,
+        ...tailwindcss,
+        ...typescript,
+        {},
       ]);
     });
 
