@@ -5,6 +5,7 @@ import {
   ignores,
   imports,
   javascript,
+  jsonc,
   preferArrow,
   prettier,
   react,
@@ -20,6 +21,7 @@ export const rkulik = (options: OptionsConfig = {}, ...userConfigs: (Config | Co
     ignores: includeIgnores = true,
     imports: includeImports = true,
     javascript: includeJavaScript = true,
+    jsonc: includeJSONC = true,
     preferArrow: includePreferArrow = true,
     prettier: includePrettier = true,
     react: includeReact = isPackageExists('react'),
@@ -37,6 +39,7 @@ export const rkulik = (options: OptionsConfig = {}, ...userConfigs: (Config | Co
     includeReact ? react : [],
     includeTailwindCss ? tailwindcss : [],
     includeTypeScript ? typescript : [],
+    includeJSONC ? jsonc : [],
     ...userConfigs,
   ];
 

@@ -2,6 +2,7 @@ export * from './destructuring';
 export * from './ignores';
 export * from './imports';
 export * from './javascript';
+export * from './jsonc';
 export * from './prefer-arrow';
 export * from './prettier';
 export * from './react';

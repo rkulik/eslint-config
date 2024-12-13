@@ -7,6 +7,7 @@ import {
   ignores,
   imports,
   javascript,
+  jsonc,
   preferArrow,
   prettier,
   react,
@@ -36,6 +37,7 @@ describe('factory', () => {
         ...react,
         ...tailwindcss,
         ...typescript,
+        ...jsonc,
       ]);
     });
 
@@ -51,6 +53,7 @@ describe('factory', () => {
         ...react,
         ...tailwindcss,
         ...typescript,
+        ...jsonc,
         { ignores: ['**/dist'] },
         { ignores: ['**/build'] },
         { rules: { semi: 'error' } },
@@ -69,13 +72,22 @@ describe('factory', () => {
         ...react,
         ...tailwindcss,
         ...typescript,
+        ...jsonc,
         { ignores: ['**/dist'] },
       ]);
     });
 
     test('should include configs based on installed packages', () => {
       mockedIsPackageExists.mockReturnValue(false);
-      expect(rkulik()).toEqual([...destructuring, ...ignores, ...imports, ...javascript, ...preferArrow, ...prettier]);
+      expect(rkulik()).toEqual([
+        ...destructuring,
+        ...ignores,
+        ...imports,
+        ...javascript,
+        ...preferArrow,
+        ...prettier,
+        ...jsonc,
+      ]);
     });
 
     test('should include configs based on options', () => {
@@ -91,6 +103,7 @@ describe('factory', () => {
           react: true,
           tailwindcss: true,
           typescript: true,
+          jsonc: false,
         }),
       ).toEqual([...react, ...tailwindcss, ...typescript]);
     });

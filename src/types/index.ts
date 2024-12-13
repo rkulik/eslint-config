@@ -7,6 +7,7 @@ export interface OptionsConfig {
   ignores?: boolean;
   imports?: boolean;
   javascript?: boolean;
+  jsonc?: boolean;
   preferArrow?: boolean;
   prettier?: boolean;
   react?: boolean;
