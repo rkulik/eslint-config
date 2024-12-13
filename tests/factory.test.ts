@@ -11,6 +11,7 @@ import {
   preferArrow,
   prettier,
   react,
+  sortPackageJson,
   tailwindcss,
   typescript,
 } from '../src/configs';
@@ -38,6 +39,7 @@ describe('factory', () => {
         ...tailwindcss,
         ...typescript,
         ...jsonc,
+        ...sortPackageJson,
       ]);
     });
 
@@ -54,6 +56,7 @@ describe('factory', () => {
         ...tailwindcss,
         ...typescript,
         ...jsonc,
+        ...sortPackageJson,
         { ignores: ['**/dist'] },
         { ignores: ['**/build'] },
         { rules: { semi: 'error' } },
@@ -73,6 +76,7 @@ describe('factory', () => {
         ...tailwindcss,
         ...typescript,
         ...jsonc,
+        ...sortPackageJson,
         { ignores: ['**/dist'] },
       ]);
     });
@@ -87,6 +91,7 @@ describe('factory', () => {
         ...preferArrow,
         ...prettier,
         ...jsonc,
+        ...sortPackageJson,
       ]);
     });
 
@@ -104,8 +109,24 @@ describe('factory', () => {
           tailwindcss: true,
           typescript: true,
           jsonc: false,
+          sortPackageJson: false,
         }),
       ).toEqual([...react, ...tailwindcss, ...typescript]);
+    });
+
+    test('should not include sort package json if jsonc is excluded', () => {
+      mockedIsPackageExists.mockReturnValue(true);
+      expect(rkulik({ jsonc: false })).toEqual([
+        ...destructuring,
+        ...ignores,
+        ...imports,
+        ...javascript,
+        ...preferArrow,
+        ...prettier,
+        ...react,
+        ...tailwindcss,
+        ...typescript,
+      ]);
     });
   });
 });

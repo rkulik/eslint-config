@@ -11,6 +11,7 @@ export interface OptionsConfig {
   preferArrow?: boolean;
   prettier?: boolean;
   react?: boolean;
+  sortPackageJson?: boolean;
   tailwindcss?: boolean;
   typescript?: boolean;
 }

@@ -9,6 +9,7 @@ import {
   preferArrow,
   prettier,
   react,
+  sortPackageJson,
   tailwindcss,
   typescript,
 } from './configs';
@@ -25,6 +26,7 @@ export const rkulik = (options: OptionsConfig = {}, ...userConfigs: (Config | Co
     preferArrow: includePreferArrow = true,
     prettier: includePrettier = true,
     react: includeReact = isPackageExists('react'),
+    sortPackageJson: includeSortPackageJson = true,
     tailwindcss: includeTailwindCss = isPackageExists('tailwindcss'),
     typescript: includeTypeScript = isPackageExists('typescript'),
   } = options;
@@ -40,6 +42,7 @@ export const rkulik = (options: OptionsConfig = {}, ...userConfigs: (Config | Co
     includeTailwindCss ? tailwindcss : [],
     includeTypeScript ? typescript : [],
     includeJSONC ? jsonc : [],
+    includeJSONC && includeSortPackageJson ? sortPackageJson : [],
     ...userConfigs,
   ];
 

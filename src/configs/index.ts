@@ -6,5 +6,6 @@ export * from './jsonc';
 export * from './prefer-arrow';
 export * from './prettier';
 export * from './react';
+export * from './sort-package-json';
 export * from './tailwindcss';
 export * from './typescript';
