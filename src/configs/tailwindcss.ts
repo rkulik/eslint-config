@@ -1,13 +1,13 @@
-import { pluginTailwindCss } from '../plugins';
+import { pluginTailwindCSS } from '../plugins';
 import type { Config } from '../types';
 
 export const tailwindcss: Config[] = [
   {
     plugins: {
-      tailwindcss: pluginTailwindCss,
+      tailwindcss: pluginTailwindCSS,
     },
     rules: {
-      ...pluginTailwindCss.configs.recommended.rules,
+      ...pluginTailwindCSS.configs.recommended.rules,
     },
   },
 ];
