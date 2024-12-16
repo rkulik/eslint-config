@@ -12,6 +12,7 @@ export interface OptionsConfig {
   prettier?: boolean;
   react?: boolean;
   sortPackageJson?: boolean;
+  sortTsconfig?: boolean;
   tailwindcss?: boolean;
   typescript?: boolean;
 }

@@ -10,6 +10,7 @@ import {
   prettier,
   react,
   sortPackageJson,
+  sortTsconfig,
   tailwindcss,
   typescript,
 } from './configs';
@@ -27,6 +28,7 @@ export const rkulik = (options: OptionsConfig = {}, ...userConfigs: (Config | Co
     prettier: includePrettier = true,
     react: includeReact = isPackageExists('react'),
     sortPackageJson: includeSortPackageJson = true,
+    sortTsconfig: includeSortTsconfig = isPackageExists('typescript'),
     tailwindcss: includeTailwindCss = isPackageExists('tailwindcss'),
     typescript: includeTypeScript = isPackageExists('typescript'),
   } = options;
@@ -43,6 +45,7 @@ export const rkulik = (options: OptionsConfig = {}, ...userConfigs: (Config | Co
     includeTypeScript ? typescript : [],
     includeJSONC ? jsonc : [],
     includeJSONC && includeSortPackageJson ? sortPackageJson : [],
+    includeJSONC && includeSortTsconfig ? sortTsconfig : [],
     ...userConfigs,
   ];
 
