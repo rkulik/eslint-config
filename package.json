@@ -2,7 +2,7 @@
   "name": "@rkulik/eslint-config",
   "type": "module",
   "version": "1.2.0",
-  "packageManager": "pnpm@9.14.2",
+  "packageManager": "pnpm@9.15.2",
   "description": "René's ESLint configuration",
   "author": "René Kulik <rene@kulik.io> (https://www.kulik.io/)",
   "license": "MIT",
@@ -45,37 +45,37 @@
     "prepare": "husky"
   },
   "peerDependencies": {
-    "eslint": "^9.15.0"
+    "eslint": "^9.17.0"
   },
   "dependencies": {
-    "@eslint/js": "^9.15.0",
+    "@eslint/js": "^9.17.0",
     "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-destructuring": "^2.2.1",
     "eslint-plugin-import": "^2.31.0",
     "eslint-plugin-jsonc": "^2.18.2",
     "eslint-plugin-prefer-arrow": "^1.2.3",
     "eslint-plugin-prettier": "^5.2.1",
-    "eslint-plugin-react-hooks": "^5.0.0",
-    "eslint-plugin-react-refresh": "^0.4.14",
+    "eslint-plugin-react-hooks": "^5.1.0",
+    "eslint-plugin-react-refresh": "^0.4.16",
     "eslint-plugin-tailwindcss": "^3.17.5",
     "local-pkg": "^0.5.1",
-    "typescript-eslint": "^8.15.0"
+    "typescript-eslint": "^8.18.2"
   },
   "devDependencies": {
-    "@commitlint/cli": "^19.6.0",
+    "@commitlint/cli": "^19.6.1",
     "@commitlint/config-conventional": "^19.6.0",
     "@jest/globals": "^29.7.0",
     "@rkulik/prettier-config": "^1.1.0",
     "@types/eslint-config-prettier": "^6.11.3",
     "@types/eslint-plugin-tailwindcss": "^3.17.0",
     "@types/eslint__js": "^8.42.3",
-    "eslint": "^9.15.0",
+    "eslint": "^9.17.0",
     "husky": "^9.1.7",
     "jest": "^29.7.0",
-    "prettier": "^3.3.3",
+    "prettier": "^3.4.2",
     "ts-jest": "^29.2.5",
     "tsup": "^8.3.5",
-    "typescript": "^5.6.3"
+    "typescript": "^5.7.2"
   },
   "prettier": "@rkulik/prettier-config"
 }
