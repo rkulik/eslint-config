@@ -6,3 +6,4 @@ export { default as pluginPrettier } from 'eslint-plugin-prettier';
 export { default as pluginReactHooks } from 'eslint-plugin-react-hooks';
 export { default as pluginReactRefresh } from 'eslint-plugin-react-refresh';
 export { default as pluginTailwindCSS } from 'eslint-plugin-tailwindcss';
+export { default as pluginTypeScriptESLint } from '@typescript-eslint/eslint-plugin';

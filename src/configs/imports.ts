@@ -4,6 +4,7 @@ import type { Config } from '../types';
 export const imports: Config[] = [
   {
     plugins: {
+      // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
       import: pluginImport,
     },
     rules: {
