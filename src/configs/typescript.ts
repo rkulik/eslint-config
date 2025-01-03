@@ -1,6 +1,6 @@
 import typescriptEslintParser from '@typescript-eslint/parser';
 
-import { pluginTypeScriptESLint } from '../plugins';
+import { pluginTypescriptEslint } from '../plugins';
 import type { Config } from '../types';
 
 import process from 'node:process';
@@ -20,11 +20,11 @@ export const typescript: Config[] = [
       },
     },
     plugins: {
-      '@typescript-eslint': pluginTypeScriptESLint,
+      '@typescript-eslint': pluginTypescriptEslint,
     },
     rules: {
-      ...pluginTypeScriptESLint.configs['eslint-recommended'].overrides![0].rules,
-      ...pluginTypeScriptESLint.configs['recommended-type-checked'].rules,
+      ...pluginTypescriptEslint.configs['eslint-recommended'].overrides![0].rules,
+      ...pluginTypescriptEslint.configs['recommended-type-checked'].rules,
       '@typescript-eslint/consistent-type-imports': 'error',
       '@typescript-eslint/explicit-function-return-type': 'error',
       '@typescript-eslint/explicit-member-accessibility': 'error',

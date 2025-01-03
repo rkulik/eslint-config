@@ -1,9 +1,9 @@
 export { default as pluginDestructuring } from 'eslint-plugin-destructuring';
 export { default as pluginImport } from 'eslint-plugin-import';
-export { default as pluginJSONC } from 'eslint-plugin-jsonc';
+export { default as pluginJsonc } from 'eslint-plugin-jsonc';
 export { default as pluginPreferArrow } from 'eslint-plugin-prefer-arrow';
 export { default as pluginPrettier } from 'eslint-plugin-prettier';
 export { default as pluginReactHooks } from 'eslint-plugin-react-hooks';
 export { default as pluginReactRefresh } from 'eslint-plugin-react-refresh';
-export { default as pluginTailwindCSS } from 'eslint-plugin-tailwindcss';
-export { default as pluginTypeScriptESLint } from '@typescript-eslint/eslint-plugin';
+export { default as pluginTailwindCss } from 'eslint-plugin-tailwindcss';
+export { default as pluginTypescriptEslint } from '@typescript-eslint/eslint-plugin';

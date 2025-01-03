@@ -1,20 +1,20 @@
 import jsoncEslintParser from 'jsonc-eslint-parser';
 
-import { pluginJSONC } from '../plugins';
+import { pluginJsonc } from '../plugins';
 import type { Config } from '../types';
 
 export const jsonc: Config[] = [
   {
     plugins: {
-      jsonc: pluginJSONC,
+      jsonc: pluginJsonc,
     },
     languageOptions: {
       parser: jsoncEslintParser,
     },
     files: ['*.json', '**/*.json', '*.json5', '**/*.json5', '*.jsonc', '**/*.jsonc'],
     rules: {
-      ...pluginJSONC.configs['flat/recommended-with-jsonc'][1].rules,
-      ...pluginJSONC.configs['flat/recommended-with-jsonc'][2].rules,
+      ...pluginJsonc.configs['flat/recommended-with-jsonc'][1].rules,
+      ...pluginJsonc.configs['flat/recommended-with-jsonc'][2].rules,
       'jsonc/sort-array-values': [
         'error',
         {
