@@ -1,11 +1,11 @@
-import { pluginDestructuring } from '../plugins';
+import { eslintDestructuringPlugin } from '../plugins';
 import type { Config } from '../types';
 
 export const destructuring: Config[] = [
   {
     plugins: {
       // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
-      destructuring: pluginDestructuring,
+      destructuring: eslintDestructuringPlugin,
     },
     rules: {
       'destructuring/in-methods-params': 'error',

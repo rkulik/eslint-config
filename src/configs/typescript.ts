@@ -1,6 +1,6 @@
-import typescriptEslintParser from '@typescript-eslint/parser';
+import eslintTypescriptParser from '@typescript-eslint/parser';
 
-import { pluginTypescriptEslint } from '../plugins';
+import { eslintTypescriptPlugin } from '../plugins';
 import type { Config } from '../types';
 
 import process from 'node:process';
@@ -9,7 +9,7 @@ export const typescript: Config[] = [
   {
     files: ['**/*.ts', '**/*.tsx', '**/*.mts', '**/*.cts'],
     languageOptions: {
-      parser: typescriptEslintParser,
+      parser: eslintTypescriptParser,
       parserOptions: {
         projectService: {
           allowDefaultProject: ['./*.js'],
@@ -20,11 +20,11 @@ export const typescript: Config[] = [
       },
     },
     plugins: {
-      '@typescript-eslint': pluginTypescriptEslint,
+      '@typescript-eslint': eslintTypescriptPlugin,
     },
     rules: {
-      ...pluginTypescriptEslint.configs['eslint-recommended'].overrides![0].rules,
-      ...pluginTypescriptEslint.configs['recommended-type-checked'].rules,
+      ...eslintTypescriptPlugin.configs['eslint-recommended'].overrides![0].rules,
+      ...eslintTypescriptPlugin.configs['recommended-type-checked'].rules,
       '@typescript-eslint/consistent-type-imports': 'error',
       '@typescript-eslint/explicit-function-return-type': 'error',
       '@typescript-eslint/explicit-member-accessibility': 'error',
