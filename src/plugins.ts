@@ -1,5 +1,6 @@
 export { default as eslintDestructuringPlugin } from 'eslint-plugin-destructuring';
 export { default as eslintImportPlugin } from 'eslint-plugin-import';
+export { default as eslintJavascriptPlugin } from '@eslint/js';
 export { default as eslintJsoncPlugin } from 'eslint-plugin-jsonc';
 export { default as eslintPreferArrowPlugin } from 'eslint-plugin-prefer-arrow';
 export { default as eslintPrettierPlugin } from 'eslint-plugin-prettier';
