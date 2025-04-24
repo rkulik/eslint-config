@@ -13,7 +13,6 @@ import {
   react,
   sortPackageJson,
   sortTsconfig,
-  tailwindcss,
   typescript,
 } from '../src/configs';
 
@@ -37,7 +36,6 @@ describe('factory', () => {
         ...preferArrow,
         ...prettier,
         ...react,
-        ...tailwindcss,
         ...typescript,
         ...jsonc,
         ...sortPackageJson,
@@ -55,7 +53,6 @@ describe('factory', () => {
         ...preferArrow,
         ...prettier,
         ...react,
-        ...tailwindcss,
         ...typescript,
         ...jsonc,
         ...sortPackageJson,
@@ -76,7 +73,6 @@ describe('factory', () => {
         ...preferArrow,
         ...prettier,
         ...react,
-        ...tailwindcss,
         ...typescript,
         ...jsonc,
         ...sortPackageJson,
@@ -110,13 +106,12 @@ describe('factory', () => {
           preferArrow: false,
           prettier: false,
           react: true,
-          tailwindcss: true,
           typescript: true,
           jsonc: false,
           sortPackageJson: false,
           sortTsconfig: false,
         }),
-      ).toEqual([...react, ...tailwindcss, ...typescript]);
+      ).toEqual([...react, ...typescript]);
     });
 
     test('should not include configs if packages are installed but excluded in options', () => {
@@ -130,7 +125,6 @@ describe('factory', () => {
           preferArrow: false,
           prettier: false,
           react: false,
-          tailwindcss: false,
           typescript: false,
           jsonc: false,
           sortPackageJson: false,
@@ -149,7 +143,6 @@ describe('factory', () => {
         ...preferArrow,
         ...prettier,
         ...react,
-        ...tailwindcss,
         ...typescript,
       ]);
     });
@@ -164,7 +157,6 @@ describe('factory', () => {
         ...preferArrow,
         ...prettier,
         ...react,
-        ...tailwindcss,
         ...typescript,
       ]);
     });

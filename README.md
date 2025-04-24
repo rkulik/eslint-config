@@ -75,7 +75,6 @@ export default utils.combineConfigs(
   configs.preferArrow,
   configs.prettier,
   configs.react,
-  configs.tailwindcss,
   configs.typescript,
 );
 ```

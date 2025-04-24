@@ -6,5 +6,4 @@ export { default as eslintPreferArrowPlugin } from 'eslint-plugin-prefer-arrow';
 export { default as eslintPrettierPlugin } from 'eslint-plugin-prettier';
 export { default as eslintReactHooksPlugin } from 'eslint-plugin-react-hooks';
 export { default as eslintReactRefreshPlugin } from 'eslint-plugin-react-refresh';
-export { default as eslintTailwindCssPlugin } from 'eslint-plugin-tailwindcss';
 export { default as eslintTypescriptPlugin } from '@typescript-eslint/eslint-plugin';

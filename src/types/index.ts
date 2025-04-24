@@ -13,6 +13,5 @@ export interface OptionsConfig {
   react?: boolean;
   sortPackageJson?: boolean;
   sortTsconfig?: boolean;
-  tailwindcss?: boolean;
   typescript?: boolean;
 }
