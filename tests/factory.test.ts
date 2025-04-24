@@ -119,6 +119,26 @@ describe('factory', () => {
       ).toEqual([...react, ...tailwindcss, ...typescript]);
     });
 
+    test('should not include configs if packages are installed but excluded in options', () => {
+      mockedIsPackageExists.mockReturnValue(true);
+      expect(
+        rkulik({
+          destructuring: false,
+          ignores: false,
+          imports: false,
+          javascript: false,
+          preferArrow: false,
+          prettier: false,
+          react: false,
+          tailwindcss: false,
+          typescript: false,
+          jsonc: false,
+          sortPackageJson: false,
+          sortTsconfig: false,
+        }),
+      ).toEqual([]);
+    });
+
     test('should not include sort package json if jsonc is excluded', () => {
       mockedIsPackageExists.mockReturnValue(true);
       expect(rkulik({ jsonc: false })).toEqual([
