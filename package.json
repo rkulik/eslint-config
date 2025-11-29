@@ -1,7 +1,7 @@
 {
   "name": "@rkulik/eslint-config",
   "type": "module",
-  "version": "1.6.0",
+  "version": "1.7.0",
   "packageManager": "pnpm@10.24.0",
   "description": "René's ESLint configuration",
   "author": "René Kulik <rene@kulik.io> (https://www.kulik.io/)",
