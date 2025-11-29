@@ -2,7 +2,7 @@
   "name": "@rkulik/eslint-config",
   "type": "module",
   "version": "1.6.0",
-  "packageManager": "pnpm@9.15.2",
+  "packageManager": "pnpm@10.24.0",
   "description": "René's ESLint configuration",
   "author": "René Kulik <rene@kulik.io> (https://www.kulik.io/)",
   "license": "MIT",
@@ -45,37 +45,37 @@
     "prepare": "husky"
   },
   "peerDependencies": {
-    "eslint": "^9.25.1"
+    "eslint": "9.39.1"
   },
   "dependencies": {
-    "@eslint/js": "^9.25.1",
-    "@typescript-eslint/eslint-plugin": "^8.31.0",
-    "@typescript-eslint/parser": "^8.31.0",
-    "eslint-config-prettier": "^10.1.2",
-    "eslint-plugin-destructuring": "^2.2.1",
-    "eslint-plugin-import": "^2.31.0",
-    "eslint-plugin-jsonc": "^2.20.0",
-    "eslint-plugin-prefer-arrow": "^1.2.3",
-    "eslint-plugin-prettier": "^5.2.6",
-    "eslint-plugin-react-hooks": "^5.2.0",
-    "eslint-plugin-react-refresh": "^0.4.20",
-    "jsonc-eslint-parser": "^2.4.0",
-    "local-pkg": "^1.1.1"
+    "@eslint/js": "9.39.1",
+    "@typescript-eslint/eslint-plugin": "8.48.0",
+    "@typescript-eslint/parser": "8.48.0",
+    "eslint-config-prettier": "10.1.8",
+    "eslint-plugin-destructuring": "2.2.1",
+    "eslint-plugin-import": "2.32.0",
+    "eslint-plugin-jsonc": "2.21.0",
+    "eslint-plugin-prefer-arrow": "1.2.3",
+    "eslint-plugin-prettier": "5.5.4",
+    "eslint-plugin-react-hooks": "7.0.1",
+    "eslint-plugin-react-refresh": "0.4.24",
+    "jsonc-eslint-parser": "2.4.1",
+    "local-pkg": "1.1.2"
   },
   "devDependencies": {
-    "@commitlint/cli": "^19.8.0",
-    "@commitlint/config-conventional": "^19.8.0",
-    "@jest/globals": "^29.7.0",
-    "@rkulik/prettier-config": "^1.1.0",
-    "@types/eslint-config-prettier": "^6.11.3",
-    "@types/node": "^22.14.1",
-    "eslint": "^9.25.1",
-    "husky": "^9.1.7",
-    "jest": "^29.7.0",
-    "prettier": "^3.5.3",
-    "ts-jest": "^29.3.2",
-    "tsup": "^8.4.0",
-    "typescript": "^5.8.3"
+    "@commitlint/cli": "20.1.0",
+    "@commitlint/config-conventional": "20.0.0",
+    "@jest/globals": "30.2.0",
+    "@rkulik/prettier-config": "1.1.0",
+    "@types/eslint-config-prettier": "6.11.3",
+    "@types/node": "24.10.1",
+    "eslint": "9.39.1",
+    "husky": "9.1.7",
+    "jest": "30.2.0",
+    "prettier": "3.7.2",
+    "ts-jest": "29.4.5",
+    "tsup": "8.5.1",
+    "typescript": "5.9.3"
   },
   "prettier": "@rkulik/prettier-config"
 }
