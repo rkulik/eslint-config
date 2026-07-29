@@ -9,7 +9,7 @@ jest.unstable_mockModule('local-pkg', () => {
   };
 });
 
-const { default: rkulik } = await import('../src');
+const { rkulik } = await import('../src');
 const {
   destructuring,
   ignores,

@@ -81,6 +81,26 @@ export default utils.combineConfigs(
 );
 ```
 
+### Use the types in TypeScript
+
+The options and return types are exported, so you can wrap `rkulik` and forward options through your own configuration function:
+
+```ts
+// eslint-config.ts
+import { rkulik } from '@rkulik/eslint-config';
+import type { Config, OptionsConfig } from '@rkulik/eslint-config';
+
+export const createConfig = (options: OptionsConfig = {}): Config[] => {
+  return rkulik(options, { ignores: ['**/generated'] });
+};
+```
+
+`rkulik` is also available as a default export, if you prefer:
+
+```ts
+import rkulik from '@rkulik/eslint-config';
+```
+
 ## License
 
 Distributed under the [MIT License](https://github.com/rkulik/eslint-config/blob/main/LICENSE), Copyright © 2024-PRESENT [René Kulik](https://www.kulik.io/)
