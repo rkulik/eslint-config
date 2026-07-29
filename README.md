@@ -7,8 +7,10 @@ René's ESLint configuration.
 ### Install
 
 ```bash
-pnpm add -D eslint @rkulik/eslint-config
+pnpm add -D eslint@10.8.0 @rkulik/eslint-config
 ```
+
+This package is ESM-only and requires ESLint 10.
 
 ### Configure
 
@@ -17,7 +19,7 @@ Once installed, create an `eslint.config.js` in your project root:
 ```js
 import rkulik from '@rkulik/eslint-config';
 
-// eslint-disable-next-line import/no-default-export
+// eslint-disable-next-line import-x/no-default-export
 export default rkulik();
 ```
 
@@ -54,7 +56,7 @@ As a second parameter, `rkulik` accepts custom configuration overrides, allowing
 // eslint.config.js
 import rkulik from '@rkulik/eslint-config';
 
-// eslint-disable-next-line import/no-default-export
+// eslint-disable-next-line import-x/no-default-export
 export default rkulik({}, { ignores: ['**/some-directory'] });
 ```
 
@@ -66,13 +68,13 @@ This package also exports all available configurations and utilities. These expo
 // eslint.config.js
 import { configs, utils } from '@rkulik/eslint-config';
 
-// eslint-disable-next-line import/no-default-export
+// eslint-disable-next-line import-x/no-default-export
 export default utils.combineConfigs(
   configs.destructuring,
   configs.ignores,
   configs.imports,
   configs.javascript,
-  configs.preferArrow,
+  configs.preferArrowFunctions,
   configs.prettier,
   configs.react,
   configs.typescript,

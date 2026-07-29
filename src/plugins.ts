@@ -1,8 +1,8 @@
 export { default as eslintDestructuringPlugin } from 'eslint-plugin-destructuring';
-export { default as eslintImportPlugin } from 'eslint-plugin-import';
+export { default as eslintImportXPlugin } from 'eslint-plugin-import-x';
 export { default as eslintJavascriptPlugin } from '@eslint/js';
 export { default as eslintJsoncPlugin } from 'eslint-plugin-jsonc';
-export { default as eslintPreferArrowPlugin } from 'eslint-plugin-prefer-arrow';
+export { default as eslintPreferArrowFunctionsPlugin } from 'eslint-plugin-prefer-arrow-functions';
 export { default as eslintPrettierPlugin } from 'eslint-plugin-prettier';
 export { default as eslintReactHooksPlugin } from 'eslint-plugin-react-hooks';
 export { default as eslintReactRefreshPlugin } from 'eslint-plugin-react-refresh';

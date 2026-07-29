@@ -1,28 +1,28 @@
 import { describe, expect, jest, test } from '@jest/globals';
-import { isPackageExists } from 'local-pkg';
+import type { isPackageExists } from 'local-pkg';
 
-import rkulik from '../src';
-import {
+const mockedIsPackageExists = jest.fn<typeof isPackageExists>();
+
+jest.unstable_mockModule('local-pkg', () => {
+  return {
+    isPackageExists: mockedIsPackageExists,
+  };
+});
+
+const { default: rkulik } = await import('../src');
+const {
   destructuring,
   ignores,
   imports,
   javascript,
   jsonc,
-  preferArrow,
+  preferArrowFunctions,
   prettier,
   react,
   sortPackageJson,
   sortTsconfig,
   typescript,
-} from '../src/configs';
-
-jest.mock('local-pkg', () => {
-  return {
-    isPackageExists: jest.fn(),
-  };
-});
-
-const mockedIsPackageExists = isPackageExists as jest.MockedFunction<typeof isPackageExists>;
+} = await import('../src/configs');
 
 describe('factory', () => {
   describe('rkulik', () => {
@@ -33,7 +33,7 @@ describe('factory', () => {
         ...ignores,
         ...imports,
         ...javascript,
-        ...preferArrow,
+        ...preferArrowFunctions,
         ...prettier,
         ...react,
         ...typescript,
@@ -50,7 +50,7 @@ describe('factory', () => {
         ...ignores,
         ...imports,
         ...javascript,
-        ...preferArrow,
+        ...preferArrowFunctions,
         ...prettier,
         ...react,
         ...typescript,
@@ -70,7 +70,7 @@ describe('factory', () => {
         ...ignores,
         ...imports,
         ...javascript,
-        ...preferArrow,
+        ...preferArrowFunctions,
         ...prettier,
         ...react,
         ...typescript,
@@ -88,7 +88,7 @@ describe('factory', () => {
         ...ignores,
         ...imports,
         ...javascript,
-        ...preferArrow,
+        ...preferArrowFunctions,
         ...prettier,
         ...jsonc,
         ...sortPackageJson,
@@ -103,7 +103,7 @@ describe('factory', () => {
           ignores: false,
           imports: false,
           javascript: false,
-          preferArrow: false,
+          preferArrowFunctions: false,
           prettier: false,
           react: true,
           typescript: true,
@@ -122,7 +122,7 @@ describe('factory', () => {
           ignores: false,
           imports: false,
           javascript: false,
-          preferArrow: false,
+          preferArrowFunctions: false,
           prettier: false,
           react: false,
           typescript: false,
@@ -140,7 +140,7 @@ describe('factory', () => {
         ...ignores,
         ...imports,
         ...javascript,
-        ...preferArrow,
+        ...preferArrowFunctions,
         ...prettier,
         ...react,
         ...typescript,
@@ -154,7 +154,7 @@ describe('factory', () => {
         ...ignores,
         ...imports,
         ...javascript,
-        ...preferArrow,
+        ...preferArrowFunctions,
         ...prettier,
         ...react,
         ...typescript,

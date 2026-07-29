@@ -1,15 +1,14 @@
-import { eslintImportPlugin } from '../plugins';
+import { eslintImportXPlugin } from '../plugins';
 import type { Config } from '../types';
 
 export const imports: Config[] = [
   {
     plugins: {
-      // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
-      import: eslintImportPlugin,
+      'import-x': eslintImportXPlugin,
     },
     rules: {
-      'import/no-default-export': 'error',
-      'import/order': [
+      'import-x/no-default-export': 'error',
+      'import-x/order': [
         'error',
         {
           alphabetize: {
