@@ -11,6 +11,7 @@ import {
   react,
   sortPackageJson,
   sortTsconfig,
+  stylistic,
   typescript,
 } from './configs';
 import type { Config, OptionsConfig } from './types';
@@ -28,6 +29,7 @@ export const rkulik = (options: OptionsConfig = {}, ...userConfigs: (Config | Co
     react: includeReact = isPackageExists('react'),
     sortPackageJson: includeSortPackageJson = true,
     sortTsconfig: includeSortTsconfig = isPackageExists('typescript'),
+    stylistic: includeStylistic = true,
     typescript: includeTypescript = isPackageExists('typescript'),
   } = options;
 
@@ -39,6 +41,7 @@ export const rkulik = (options: OptionsConfig = {}, ...userConfigs: (Config | Co
     includePreferArrowFunctions ? preferArrowFunctions : [],
     includePrettier ? prettier : [],
     includeReact ? react : [],
+    includeStylistic ? stylistic : [],
     includeTypescript ? typescript : [],
     includeJsonc ? jsonc : [],
     includeJsonc && includeSortPackageJson ? sortPackageJson : [],

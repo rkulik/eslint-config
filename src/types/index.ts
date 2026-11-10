@@ -13,5 +13,6 @@ export interface OptionsConfig {
   react?: boolean;
   sortPackageJson?: boolean;
   sortTsconfig?: boolean;
+  stylistic?: boolean;
   typescript?: boolean;
 }

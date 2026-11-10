@@ -8,4 +8,5 @@ export * from './prettier';
 export * from './react';
 export * from './sort-package-json';
 export * from './sort-tsconfig';
+export * from './stylistic';
 export * from './typescript';

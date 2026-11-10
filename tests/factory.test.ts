@@ -21,6 +21,7 @@ const {
   react,
   sortPackageJson,
   sortTsconfig,
+  stylistic,
   typescript,
 } = await import('../src/configs');
 
@@ -36,6 +37,7 @@ describe('factory', () => {
         ...preferArrowFunctions,
         ...prettier,
         ...react,
+        ...stylistic,
         ...typescript,
         ...jsonc,
         ...sortPackageJson,
@@ -53,6 +55,7 @@ describe('factory', () => {
         ...preferArrowFunctions,
         ...prettier,
         ...react,
+        ...stylistic,
         ...typescript,
         ...jsonc,
         ...sortPackageJson,
@@ -73,6 +76,7 @@ describe('factory', () => {
         ...preferArrowFunctions,
         ...prettier,
         ...react,
+        ...stylistic,
         ...typescript,
         ...jsonc,
         ...sortPackageJson,
@@ -90,6 +94,7 @@ describe('factory', () => {
         ...javascript,
         ...preferArrowFunctions,
         ...prettier,
+        ...stylistic,
         ...jsonc,
         ...sortPackageJson,
       ]);
@@ -105,6 +110,7 @@ describe('factory', () => {
           javascript: false,
           preferArrowFunctions: false,
           prettier: false,
+          stylistic: false,
           react: true,
           typescript: true,
           jsonc: false,
@@ -124,6 +130,7 @@ describe('factory', () => {
           javascript: false,
           preferArrowFunctions: false,
           prettier: false,
+          stylistic: false,
           react: false,
           typescript: false,
           jsonc: false,
@@ -143,6 +150,7 @@ describe('factory', () => {
         ...preferArrowFunctions,
         ...prettier,
         ...react,
+        ...stylistic,
         ...typescript,
       ]);
     });
@@ -157,6 +165,7 @@ describe('factory', () => {
         ...preferArrowFunctions,
         ...prettier,
         ...react,
+        ...stylistic,
         ...typescript,
       ]);
     });

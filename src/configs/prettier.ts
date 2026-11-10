@@ -10,6 +10,7 @@ export const prettier: Config[] = [
     },
     rules: {
       ...eslintPrettierConfig.rules,
+      curly: ['error', 'all'],
       'prettier/prettier': 'error',
     },
   },
