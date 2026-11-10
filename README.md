@@ -7,7 +7,7 @@ René's ESLint configuration.
 ### Install
 
 ```bash
-pnpm add -D eslint@10.8.0 @rkulik/eslint-config
+pnpm add -D eslint@10.14.0 @rkulik/eslint-config
 ```
 
 This package is ESM-only and requires ESLint 10.
