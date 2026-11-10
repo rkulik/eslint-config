@@ -1,5 +1,5 @@
 import { describe, expect, jest, test } from '@jest/globals';
-import { Linter } from 'eslint';
+import { ESLint, Linter } from 'eslint';
 import type { isPackageExists } from 'local-pkg';
 
 const mockedIsPackageExists = jest.fn<typeof isPackageExists>();
@@ -22,18 +22,43 @@ const lint = (code: string): string[] => {
   });
 };
 
+const calculateRules = async (filePath: string): Promise<Partial<Linter.RulesRecord>> => {
+  mockedIsPackageExists.mockReturnValue(true);
+  const eslint = new ESLint({ overrideConfigFile: true, overrideConfig: rkulik() as Linter.Config[] });
+  const config = (await eslint.calculateConfigForFile(filePath)) as Linter.Config;
+
+  return Object.fromEntries(
+    Object.entries(config.rules ?? {}).filter((entry) => {
+      const [, ruleConfig] = entry;
+      const severity = Array.isArray(ruleConfig) ? ruleConfig[0] : ruleConfig;
+
+      return severity !== 0 && severity !== 'off';
+    }),
+  );
+};
+
 describe('rules', () => {
-  describe('curly', () => {
-    test('should report braceless if statements', () => {
-      expect(lint('const check = (value) => {\n  if (value) return 1;\n\n  return 0;\n};\n\ncheck(1);\n')).toContain(
-        'curly',
+  describe('effective rules', () => {
+    test('should match the snapshot for typescript files', async () => {
+      expect(await calculateRules('file.ts')).toMatchSnapshot();
+    });
+
+    test('should match the snapshot for javascript files', async () => {
+      expect(await calculateRules('file.js')).toMatchSnapshot();
+    });
+  });
+
+  describe('destructuring in params', () => {
+    test('should report destructured parameters', () => {
+      expect(lint('const greet = ({ name }) => {\n  return name;\n};\n\ngreet({});\n')).toContain(
+        'destructuring/in-params',
       );
     });
 
-    test('should not report if statements with braces', () => {
+    test('should not report destructuring inside the function body', () => {
       expect(
-        lint('const check = (value) => {\n  if (value) {\n    return 1;\n  }\n\n  return 0;\n};\n\ncheck(1);\n'),
-      ).not.toContain('curly');
+        lint('const greet = (person) => {\n  const { name } = person;\n\n  return name;\n};\n\ngreet({});\n'),
+      ).not.toContain('destructuring/in-params');
     });
   });
 
